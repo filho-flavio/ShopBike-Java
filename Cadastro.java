@@ -12,7 +12,6 @@ public class Cadastro {
             String estado) {
         Produto novoProduto = new Produto(id++, nome, descricao, custo, venda, estado);
         produtosCadastrados.add(novoProduto);
-
     }
 
     public Produto getProdutoPeloCodigo(int codigo) {
@@ -21,6 +20,20 @@ public class Cadastro {
                 return produto;
             }
         }
-        return null;
+        throw new Error("Produto não encontrado!");
+    }
+
+    public void produtosCadastrados(){
+        System.out.println("----------------------------------\n");
+        System.out.println("Lista de Produtos cadastrados: ");
+        System.out.println("\n----------------------------------");
+        for(Produto produto : produtosCadastrados){
+            System.out.println("ID: " + produto.getId());
+            System.out.println("Descrição: " + produto.getDescricao());
+            System.out.println("Valor custo: " + produto.getValorCusto());
+            System.out.println("Valor venda: " + produto.getValorVenda());
+            System.out.println("Estado produto: " + produto.getEstado());
+            System.out.println("----------------------------------");
+        };
     }
 }

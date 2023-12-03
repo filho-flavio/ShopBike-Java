@@ -5,6 +5,7 @@ public class Produto {
     private double Valor_Custo;
     private double Valor_Venda;
     private String Estado;
+    private int Quantidade;
 
     // Construtor da Classe
     public Produto(int id, String nome, String descricao, double custo, double venda, String estado) {
@@ -63,5 +64,13 @@ public class Produto {
 
     public String getEstado() {
         return this.Estado;
+    }
+
+    public void setQuantidade(int quantidade){
+        this.Quantidade = quantidade;
+    }
+
+    public int getQuantidade(){
+        return this.Quantidade;
     }
 }
