@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         Cadastro cadastro = new Cadastro();
         Estoque estoque = new Estoque();
-        Pedido pedidos = new Pedido();
+        Carrinho carrinho = new Carrinho();
         CadastroCliente cadastroCliente = new CadastroCliente();
 
         cadastro.cadastrarNovoProduto("Bicicleta", "Bicicleta Aro 29.", 998.99, 1990, "Novo");
@@ -22,14 +22,20 @@ public class Main {
         estoque.produtosEmEstoque();
 
         cadastroCliente.cadastrarCliente("Manoel Gomes ", "gomes@gmail.com");
+        cadastroCliente.cadastrarCliente("João Pirilo", "pirilo9450@gmail.com");
 
         cadastroCliente.clientesCadastrados();
 
         Clientes ManoelGomes = cadastroCliente.getClientePeloCodigo(1);
+        Clientes JoaoPirilo = cadastroCliente.getClientePeloCodigo(2);
 
-        pedidos.emitirPedido(ManoelGomes, bicicletaAro31, 1);
+        carrinho.adicionarAoCarrinho("Pedido para Manoel Gomes", ManoelGomes, bicicletaAro29, 1);
+        carrinho.adicionarAoCarrinho("Pedido para Pirilo", JoaoPirilo, bicicletaAro30, 1);
 
-        pedidos.detalharPedido();
+        carrinho.mostrarCarrinho();
 
+        carrinho.finalizarCompra(0);
+
+        carrinho.mostrarCarrinho();
     }
 }

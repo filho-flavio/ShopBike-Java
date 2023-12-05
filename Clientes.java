@@ -1,7 +1,7 @@
 public class Clientes {
     private int ID_Cliente;
-    private String nome;
-    private String contato;
+    protected String nome;
+    protected String contato;
 
     // Construtor padrão
     public Clientes(int cliente, String nome, String contato) {
