@@ -22,6 +22,14 @@ public class Carrinho {
         }
     }
 
+    public void removerPedidoCarrinho(int idPedido){
+        for(Pedido pedido : pedidosEmCarrinho){
+            if(idPedido == pedido.getId()) {
+                pedidosEmCarrinho.remove(idPedido); 
+            }
+         }
+    };
+
     public void finalizarCompra(int codigo){
          for(Pedido pedido : pedidosEmCarrinho){
             if(codigo == pedido.getId()) {
@@ -32,4 +40,15 @@ public class Carrinho {
             }
          }
     }
+
+    public void desconto(int idPedido, double descontoPedido){
+        for(Pedido pedido : pedidosEmCarrinho){
+            if(idPedido == pedido.getId()){
+                double novoValor = pedido.getValorPedido() - descontoPedido;
+                pedido.setValorProduto(novoValor);
+           }
+        }
+    }
+
+
 }

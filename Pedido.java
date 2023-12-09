@@ -25,23 +25,22 @@ public class Pedido {
         System.out.println("Detalhes do Pedido: " + nomePedido);
         System.out.println("ID do Pedido: " + getId());
         System.out.println("----------------------------------\n");
-        
+
         System.out.println("Dados do Cliente:");
         System.out.println("----------------------------------");
         System.out.println("Nome: " + cliente.getNome());
         System.out.println("Contato: " + cliente.getContato());
         System.out.println("\n----------------------------------");
-        
+
         System.out.println("Produtos:");
         System.out.println("----------------------------------");
         System.out.println("Descrição: " + produto.getDescricao());
         System.out.println("Estado: " + produto.getEstado());
         System.out.println("Valor: " + produto.getValorVenda());
         System.out.println("Quantidade: " + produto.getQuantidade());
-        
+
         System.out.println("\n----------------------------------\n");
     }
-    
 
     // Getters and Setters
     public int getId() {
@@ -56,11 +55,11 @@ public class Pedido {
         return this.nomePedido;
     }
 
-    public void setStatus(boolean status){
+    public void setStatus(boolean status) {
         this.statusPedido = status;
     }
 
-    public boolean getStatusPedido(){
+    public boolean getStatusPedido() {
         return this.statusPedido;
     }
 
@@ -78,5 +77,13 @@ public class Pedido {
 
     public Produto geProduto() {
         return this.produto;
+    }
+
+    public void setValorProduto(double valor) {
+        this.produto.setValorVenda(valor);
+    }
+
+    public double getValorPedido(){
+        return this.produto.getValorVenda();
     }
 }

@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class Cadastro {
+public class GerenciarProdutos {
     private ArrayList<Produto> produtosCadastrados;
     private int id = 0;
 
-    public Cadastro() {
+    public GerenciarProdutos() {
         produtosCadastrados = new ArrayList<>();
     }
 
