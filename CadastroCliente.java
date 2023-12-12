@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class GerenciarCliente {
+public class CadastroCliente {
     ArrayList<Clientes> clientes;
     private int id = 1;
 
-    public GerenciarCliente() {
+    public CadastroCliente() {
         clientes = new ArrayList<>();
     }
 

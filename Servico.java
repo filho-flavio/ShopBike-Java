@@ -1,11 +1,11 @@
-public class Serviço {
+public class Servico {
     private int ID_Cadastro;
     private String Nome;
     private String Descricao;
     private double Valor_Custo;
 
     // Construtor da Classe
-    public Serviço(int id, String nome, String descricao, double custo) {
+    public Servico(int id, String nome, String descricao, double custo) {
         this.ID_Cadastro = id;
         this.Nome = nome;
         this.Descricao = descricao;

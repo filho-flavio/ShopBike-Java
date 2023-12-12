@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        GerenciarProdutos gerenciarProdutos = new GerenciarProdutos();
+        CadastroProdutos gerenciarProdutos = new CadastroProdutos();
         Estoque estoque = new Estoque();
         Carrinho carrinho = new Carrinho();
-        GerenciarCliente cadastroCliente = new GerenciarCliente();
+        CadastroCliente cadastroCliente = new CadastroCliente();
 
         gerenciarProdutos.cadastrarNovoProduto("Bicicleta", "Bicicleta Aro 29.", 998.99, 1990, "Novo");
         gerenciarProdutos.cadastrarNovoProduto("Bicicleta", "Bicicleta Aro 30.", 1000, 2499.90, "Novo");
