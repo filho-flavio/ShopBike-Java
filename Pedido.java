@@ -4,7 +4,6 @@ public class Pedido {
     private boolean statusPedido;
     private Clientes cliente;
     private Produto produto;
-    // private Estoque estoque;
 
     // Construtor
     public Pedido(int ID_Pedido, String nomePedido, Clientes cliente, Produto produto, int quantidade) {
@@ -75,7 +74,7 @@ public class Pedido {
         this.produto = produto;
     }
 
-    public Produto geProduto() {
+    public Produto getProduto() {
         return this.produto;
     }
 

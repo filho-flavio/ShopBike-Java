@@ -31,10 +31,10 @@ public class Estoque {
         }
     }
 
-    // public boolean temNoEstoque(Produto produto, int quantidade) {
-    //     if (produto.getQuantidade() >= quantidade) {
-    //         return true;
-    //     }
-    //     return false;
-    // }
+    public boolean temNoEstoque(Produto produto) {
+        if (produto.getQuantidade() >= produto.getQuantidade()) {
+            return true;
+        }
+        return false;
+    }
 }
